@@ -12,8 +12,8 @@ The MSBuild project file (.csproj) is an xml file that describe and control the 
 
 The path to the acad.exe file of the AutoCAD version to be launched at debugging startup must be consistent with that of the local computer.
 ```	
-    <!-- Change the targeted .NET Framework version -->
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <!-- Change the path to the installation folder of the  targeted AutoCAD version -->
+    <StartProgram>C:\Program Files\Autodesk\AutoCAD 2022\acad.exe</StartProgram>
 ```
 The paths to the AutoCAD libraries referenced by the project must be consistent with those of the local computer.
 ```
@@ -51,4 +51,4 @@ Default name of the assembly.
     <DefaultName>AutoCAD 2022 Plugin</DefaultName>
 ```
 ### Installation of the template
-The 'AutoCAD Plugin Template' folder (possibly zipped) have to be pasted in the Visual Studio 20XX\Templates\ProjectTemplates directory.
+The 'AutoCAD Plugin Template' folder (possibly zipped) have to be pasted in the 'Visual Studio 20XX\Templates\ProjectTemplates' directory.
