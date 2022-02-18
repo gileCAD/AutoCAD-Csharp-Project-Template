@@ -10,7 +10,7 @@
     <RootNamespace>$safeprojectname$</RootNamespace>
     <AssemblyName>$safeprojectname$</AssemblyName>
 	
-	<!-- Change the targeted .NET Framework version -->
+    <!-- Change the targeted .NET Framework version -->
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
 	
     <FileAlignment>512</FileAlignment>
@@ -25,7 +25,7 @@
     <WarningLevel>4</WarningLevel>
     <StartAction>Program</StartAction>
 	
-	<!-- Change the path to the installation folder of the  targeted AutoCAD version -->
+    <!-- Change the path to the installation folder of the  targeted AutoCAD version -->
     <StartProgram>C:\Program Files\Autodesk\AutoCAD 2022\acad.exe</StartProgram>
 	
     <StartArguments>/nologo /b "start.scr"</StartArguments>
@@ -40,7 +40,7 @@
   </PropertyGroup>
   <ItemGroup>
   
-	<!-- Change the paths to the targeted AutoCAD libraries -->
+    <!-- Change the paths to the targeted AutoCAD libraries -->
     <Reference Include="AcCoreMgd">
       <HintPath>C:\ObjectARX 2022\inc\AcCoreMgd.dll</HintPath>
       <Private>False</Private>
