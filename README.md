@@ -37,7 +37,7 @@ It is preferable that the required version of .NET Framework is the one installe
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
 ```
 #### MyTemplate.vstemplate
-This file describle the template.
+This file describes the template.
 
 Name and Desription of the template.
 ```
