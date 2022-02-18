@@ -1,0 +1,1 @@
+﻿netload "$projectname$.dll" 
