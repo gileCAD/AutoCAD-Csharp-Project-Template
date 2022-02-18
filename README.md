@@ -1,4 +1,4 @@
-# AutoCAD-Project-Template
+# AutoCAD-Csharp-Project-Template
 ### A C# Visual Studio Project Template for an AutoCAD Plugin.
 This template allows to start a C# project for an AutoCAD plugin in Visual Studio. It is designed to automatically start the specified AutoCAD version and load the assemby when starting the debugging.
 
