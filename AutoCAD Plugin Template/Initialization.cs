@@ -25,7 +25,7 @@ namespace $safeprojectname$
             var doc = AcCoreAp.DocumentManager.MdiActiveDocument;
             if (doc != null)
             {
-                AcAp.Idle -= OnIdle;
+                AcCoreAp.Idle -= OnIdle;
                 doc.Editor.WriteMessage("\n$projectname$ loaded.\n");
             }
         }
