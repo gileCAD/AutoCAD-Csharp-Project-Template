@@ -15,6 +15,10 @@ The path to the acad.exe file of the AutoCAD version to be launched at debugging
     <!-- Change the path to the installation folder of the  targeted AutoCAD version -->
     <StartProgram>C:\Program Files\Autodesk\AutoCAD 2022\acad.exe</StartProgram>
 ```
+Some arguments can be added to the command line to perform additional operations when starting AutoCAD, like a specific profile, a specific product, ... (see [this page](https://knowledge.autodesk.com/support/autocad/learn-explore/caas/sfdcarticles/sfdcarticles/Startup-switches-for-AutoCAD.html)).
+``` 
+<StartArguments>/nologo /product ACAD /b "start.scr"</StartArguments>
+```
 The paths to the AutoCAD libraries referenced by the project must be consistent with those of the local computer.
 ```
     <!-- Change the paths to the targeted AutoCAD libraries -->
