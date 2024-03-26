@@ -15,12 +15,12 @@ In order for the template to work, the paths to the acad.exe file and to the aut
 The MSBuild project file (.csproj) is an xml file that describe and control the process of generation of the applications.
 
 The path to the acad.exe file of the AutoCAD version to be launched at debugging startup must be consistent with that of the local computer.
-```	
+```	xml
 		<!-- Change the path to the installation folder of the targeted AutoCAD version -->
 		<StartProgram>C:\Program Files\Autodesk\AutoCAD 2022\acad.exe</StartProgram>
 ```
 The paths to the AutoCAD libraries referenced by the project must be consistent with those of the local computer.
-```
+``` xml
 	    <!-- Change the paths to the targeted AutoCAD libraries -->
 		<Reference Include="AcCoreMgd">
 			<HintPath>C:\ObjectARX 2022\inc\AcCoreMgd.dll</HintPath>
@@ -36,7 +36,7 @@ The paths to the AutoCAD libraries referenced by the project must be consistent 
 		</Reference>
 ```
 It is preferable that the required version of .NET Framework is the one installed by the targeted AutoCAD version (see [this page](https://help.autodesk.com/view/OARX/2022/ENU/?guid=GUID-450FD531-B6F6-4BAE-9A8C-8230AAC48CB4)).
-```
+``` xml
 		<!-- Change the targeted .NET Framework version -->
 		<TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
 ```
