@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "$projectname$": {
+      "commandName": "Executable",
+      "executablePath": "F:\\Program Files\\Autodesk\\AutoCAD 2025\\acad.exe",
+      "commandLineArgs": "/nologo /b \"start.scr\""
+    }
+  }
+}

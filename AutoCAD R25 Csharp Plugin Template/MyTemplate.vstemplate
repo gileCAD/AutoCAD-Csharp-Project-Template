@@ -1,0 +1,37 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+	<TemplateData>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<PlatformTarget>x64</PlatformTarget>
+	
+		<!-- Change the name and description as desired -->
+		<Name>AutoCAD R25 Plugin</Name>
+		<Description>AutoCAD R25 Plugin (.NET 8)</Description>
+	
+		<ProjectType>CSharp</ProjectType>
+		<ProjectSubType>
+		</ProjectSubType>
+		<SortOrder>1000</SortOrder>
+		<CreateNewFolder>true</CreateNewFolder>
+	
+		<!-- Change the default project name as desired -->
+		<DefaultName>AutocadR25Plugin</DefaultName>
+	
+		<ProvideDefaultName>true</ProvideDefaultName>
+		<LocationField>Enabled</LocationField>
+		<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+		<CreateInPlace>true</CreateInPlace>
+		<Icon>AcadCsTemplateIcon.ico</Icon>
+	</TemplateData>
+	<TemplateContent>
+		<Project TargetFileName="AutocadR25Plugin.csproj" File="AutocadR25Plugin.csproj" ReplaceParameters="true">
+			<Folder Name="Properties" TargetFolderName="Properties">
+				<ProjectItem ReplaceParameters="true" TargetFileName="launchSettings.json">launchSettings.json</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="Resources.resx">Resources.resx</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="Resources.Designer.cs">Resources.Designer.cs</ProjectItem>
+			</Folder>
+			<ProjectItem ReplaceParameters="true" TargetFileName="Commands.cs">Commands.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true" TargetFileName="ExtensionApplication.cs">ExtensionApplication.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true" TargetFileName="start.scr">start.scr</ProjectItem>
+		</Project>
+	</TemplateContent>
+</VSTemplate>

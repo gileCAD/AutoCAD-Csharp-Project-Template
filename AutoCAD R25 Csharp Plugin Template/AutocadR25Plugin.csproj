@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<PlatformTarget>x64</PlatformTarget>
+	</PropertyGroup>
+  
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.WindowsDesktop.App"/>
+	</ItemGroup>
+
+	<!-- Change the paths to the targeted AutoCAD libraries -->
+	<ItemGroup>
+	    <Reference Include="accoremgd">
+	        <HintPath>F:\ObjectARX 2025\inc\AcCoreMgd.dll</HintPath>
+	        <Private>False</Private>
+	    </Reference>
+	    <Reference Include="Acdbmgd">
+	        <HintPath>F:\ObjectARX 2025\inc\AcDbMgd.dll</HintPath>
+	        <Private>False</Private>
+	    </Reference>
+	    <Reference Include="acmgd">
+	        <HintPath>F:\ObjectARX 2025\inc\AcMgd.dll</HintPath>
+	        <Private>False</Private>
+	    </Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="Properties\Resources.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Resources.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="Properties\Resources.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="start.scr">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Using Include="Autodesk.AutoCAD.ApplicationServices.Core" />
+	  <Using Include="Autodesk.AutoCAD.DatabaseServices" />
+	  <Using Include="Autodesk.AutoCAD.EditorInput" />
+	  <Using Include="Autodesk.AutoCAD.Geometry" />
+	  <Using Include="Autodesk.AutoCAD.Runtime" />
+	  <Using Include="System.Math">
+	    <Static>True</Static>
+	  </Using>
+	</ItemGroup>
+
+</Project>
