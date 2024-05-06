@@ -2,8 +2,8 @@
   <TemplateData>
   
     <!-- Change the name and description as desired -->
-    <Name>AutoCAD 2022 Plugin</Name>
-    <Description>AutoCAD 2022 Plugin Project</Description>
+    <Name>AutoCAD 2024 Plugin</Name>
+    <Description>AutoCAD 2024 Plugin Project</Description>
 	
     <ProjectType>CSharp</ProjectType>
     <ProjectSubType>
@@ -12,7 +12,7 @@
     <CreateNewFolder>true</CreateNewFolder>
 	
     <!-- Change the default name as desired -->
-    <DefaultName>AutoCAD 2022 Plugin</DefaultName>
+    <DefaultName>AutoCAD 2024 Plugin</DefaultName>
 	
     <ProvideDefaultName>true</ProvideDefaultName>
     <LocationField>Enabled</LocationField>
@@ -20,7 +20,7 @@
     <Icon>AcadCsTemplateIcon.ico</Icon>
   </TemplateData>
   <TemplateContent>
-    <Project TargetFileName="AutoCADPlugin.csproj" File="AutoCADPlugin.csproj" ReplaceParameters="true">
+    <Project TargetFileName="AutoCAD24Plugin.csproj" File="AutoCAD24Plugin.csproj" ReplaceParameters="true">
       <ProjectItem ReplaceParameters="true" TargetFileName="Commands.cs">Commands.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="Initialization.cs">Initialization.cs</ProjectItem>
       <Folder Name="Properties" TargetFolderName="Properties">
