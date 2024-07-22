@@ -7,7 +7,7 @@ These templates allow to start a C# project for an AutoCAD plugin in Visual Stud
 For AutoCAD 2016 and later versions it is imperative that the LEGACYCODESEARCH system variable is set to 1 to allow automatic loading of the assembly. 
 
 ### Editing the template files
-In order for the template to work, the paths to the acad.exe file and to the autoCAD libraries must match those on the local computer.
+In order for the template to work, the paths to the acad.exe file and to the AutoCAD libraries must match those on the local computer.
 
 ### AutoCAD R24 Csharp Project Template
 
