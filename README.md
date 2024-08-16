@@ -98,9 +98,8 @@ To reference Windows Forms or WPF libraries, you have to add the following nodes
 <!-- and/or -->
 <UseWPF>true</UseWPF>
 ```
-To disable some .NET Core specific features such as Implicit Usings and Nullable References, remove the following nodes or replace `enable` with `disable`.
+To disable some .NET Core specific features such as Nullable References, remove the following node or replace `enable` with `disable`.
 ``` xml
-<ImplicitUsings>enable</ImplicitUsings>
 <Nullable>enable</Nullable>
 ```
 
