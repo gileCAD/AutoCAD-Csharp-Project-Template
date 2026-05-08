@@ -15,7 +15,7 @@ The MSBuild project file (.csproj) is an xml file that describe and control the 
 The path to the acad.exe file of the AutoCAD version to be launched at debugging startup must be consistent with that of the local computer.
 ```	xml
 		<!-- Change the path to the installation folder of the targeted AutoCAD version -->
-		<StartProgram>C:\Program Files\Autodesk\AutoCAD 2022\acad.exe</StartProgram>
+		<StartProgram>C:\Program Files\Autodesk\AutoCAD 2024\acad.exe</StartProgram>
 ```
 The paths to the AutoCAD libraries referenced by the project must be consistent with those of the local computer.
 ``` xml
