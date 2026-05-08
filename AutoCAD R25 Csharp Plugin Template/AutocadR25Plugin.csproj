@@ -6,6 +6,11 @@
 		<Nullable>enable</Nullable>
 		<PlatformTarget>x64</PlatformTarget>
 	</PropertyGroup>
+	
+	<PropertyGroup>
+	    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+	    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    </PropertyGroup>
   
 	<ItemGroup>
 		<FrameworkReference Include="Microsoft.WindowsDesktop.App"/>
