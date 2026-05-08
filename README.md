@@ -2,9 +2,7 @@
 ### C# Visual Studio Project Template for an AutoCAD Plugin.
 These templates allow to start a C# project for an AutoCAD plugin in Visual Studio. They are designed to automatically start the specified AutoCAD version and load the assemby when starting the debugging.
 'AutoCAD R24 Csharp Project Template' is to be used with AutoCAD prior to 2025 (targets .NET Framework).
-'AutoCAD R25 Csharp Project Template' is to be used with AutoCAD 2025 and later (targets .NET 8).
-
-For AutoCAD 2016 and later versions it is imperative that the LEGACYCODESEARCH system variable is set to 1 to allow automatic loading of the assembly. 
+'AutoCAD R25 Csharp Project Template' is to be used with AutoCAD 2025 and 2026 (targets .NET 8).
 
 ### Editing the template files
 In order for the template to work, the paths to the acad.exe file and to the AutoCAD libraries must match those on the local computer.
@@ -23,15 +21,15 @@ The paths to the AutoCAD libraries referenced by the project must be consistent 
 ``` xml
 	    <!-- Change the paths to the targeted AutoCAD libraries -->
 		<Reference Include="AcCoreMgd">
-			<HintPath>C:\ObjectARX 2022\inc\AcCoreMgd.dll</HintPath>
+			<HintPath>C:\ObjectARX 2024\inc\AcCoreMgd.dll</HintPath>
 			<Private>False</Private>
 		</Reference>
 		<Reference Include="AcDbMgd">
-			<HintPath>C:\ObjectARX 2022\inc\AcDbMgd.dll</HintPath>
+			<HintPath>C:\ObjectARX 2024\inc\AcDbMgd.dll</HintPath>
 			<Private>False</Private>
 		</Reference>
 		<Reference Include="AcMgd">
-			<HintPath>C:\ObjectARX 2022\inc\AcMgd.dll</HintPath>
+			<HintPath>C:\ObjectARX 2024\inc\AcMgd.dll</HintPath>
 			<Private>False</Private>
 		</Reference>
 ```
@@ -65,7 +63,7 @@ The path to the acad.exe file of the AutoCAD version to be launched at debugging
     "$safeprojectname$": {
       "commandName": "Executable",
       "executablePath": "C:\\Program Files\\Autodesk\\AutoCAD 2025\\acad.exe",
-      "commandLineArgs": "/nologo /b \"start.scr\""
+      "commandLineArgs": "/nologo /b \"$(MSBuildProjectDirectory)\\start.scr\""
     }
   }
 }
