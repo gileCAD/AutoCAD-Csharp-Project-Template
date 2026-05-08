@@ -26,9 +26,9 @@
     <StartAction>Program</StartAction>
 	
     <!-- Change the path to the installation folder of the  targeted AutoCAD version -->
-    <StartProgram>C:\Program Files\Autodesk\AutoCAD 2022\acad.exe</StartProgram>
+    <StartProgram>C:\Program Files\Autodesk\AutoCAD 2024\acad.exe</StartProgram>
 	
-    <StartArguments>/nologo /b "start.scr"</StartArguments>
+    <StartArguments>/nologo /b "$solutiondirectory$\$projectname$\start.scr"</StartArguments>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -42,15 +42,15 @@
   
     <!-- Change the paths to the targeted AutoCAD libraries -->
     <Reference Include="AcCoreMgd">
-      <HintPath>C:\ObjectARX 2022\inc\AcCoreMgd.dll</HintPath>
+      <HintPath>C:\ObjectARX 2024\inc\AcCoreMgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="AcDbMgd">
-      <HintPath>C:\ObjectARX 2022\inc\AcDbMgd.dll</HintPath>
+      <HintPath>C:\ObjectARX 2024\inc\AcDbMgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="AcMgd">
-      <HintPath>C:\ObjectARX 2022\inc\AcMgd.dll</HintPath>
+      <HintPath>C:\ObjectARX 2024\inc\AcMgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
 	
@@ -69,7 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="start.scr">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,1 +1,1 @@
-﻿netload "$projectname$.dll" 
+﻿netload "$solutiondirectory$\$projectname$\bin\Debug\$projectname$.dll" 
