@@ -1,8 +1,12 @@
 # AutoCAD-Csharp-Project-Template
 ### C# Visual Studio Project Template for an AutoCAD Plugin.
-These templates allow to start a C# project for an AutoCAD plugin in Visual Studio. They are designed to automatically start the specified AutoCAD version and load the assemby when starting the debugging.
+These templates allow to start a C# project for an AutoCAD plugin in Visual Studio. They are designed to automatically start the specified AutoCAD version and load the assembly when starting the debugging.
+
 'AutoCAD R24 Csharp Project Template' is to be used with AutoCAD prior to 2025 (targets .NET Framework).
+
 'AutoCAD R25 Csharp Project Template' is to be used with AutoCAD 2025 and 2026 (targets .NET 8).
+
+For AutoCAD 2027 and later (.NET 10.0), the template could be based on the 'AutoCAD R25 Csharp Project Template' after replacing the TargetFramework with: `net10.0-windows`. 
 
 ### Editing the template files
 In order for the template to work, the paths to the acad.exe file and to the AutoCAD libraries must match those on the local computer.
