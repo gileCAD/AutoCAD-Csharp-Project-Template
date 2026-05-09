@@ -77,15 +77,15 @@ The paths to the AutoCAD libraries referenced by the project must be consistent 
 	<!-- Change the paths to the targeted AutoCAD libraries -->
 	<ItemGroup>
 		<Reference Include="accoremgd">
-			<HintPath>F:\ObjectARX 2025\inc\AcCoreMgd.dll</HintPath>
+			<HintPath>C:\ObjectARX 2025\inc\AcCoreMgd.dll</HintPath>
 			<Private>False</Private>
 		</Reference>
 		<Reference Include="Acdbmgd">
-			<HintPath>F:\ObjectARX 2025\inc\AcDbMgd.dll</HintPath>
+			<HintPath>C:\ObjectARX 2025\inc\AcDbMgd.dll</HintPath>
 			<Private>False</Private>
 		</Reference>
 		<Reference Include="acmgd">
-			<HintPath>F:\ObjectARX 2025\inc\AcMgd.dll</HintPath>
+			<HintPath>C:\ObjectARX 2025\inc\AcMgd.dll</HintPath>
 			<Private>False</Private>
 		</Reference>
 	</ItemGroup>
