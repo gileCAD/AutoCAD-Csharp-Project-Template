@@ -8,7 +8,7 @@ These templates allow to start a C# project for an AutoCAD plugin in Visual Stud
 
 For AutoCAD 2027 and later (.NET 10.0), the template could be based on the 'AutoCAD R25 Csharp Project Template' after replacing the TargetFramework with: `net10.0-windows`. 
 
-'AutoCAD triple target Csharp  Plugin Template' is an example of multi framework targeting project (targets .NET Framework, .NET 8.0 and .NET 10.0). It generates three assemblies (net48, net8.0-windows and net10.0-windows sub-folders) from the same shared code source.
+'AutoCAD triple target Csharp  Plugin Template' is an example of multi framework targeting project (targets .NET Framework, .NET 8.0 and .NET 10.0). The project will generate three assemblies (in the net48, net8.0-windows and net10.0-windows sub-folders) from the same shared code source.
 
 ### Editing the template files
 In order for the template to work, the paths to the acad.exe file and to the AutoCAD libraries must match those on the local computer.
@@ -130,11 +130,17 @@ The path to the executablePath (acad.exe) file of the AutoCAD version to be laun
   "profiles": {
     "$safeprojectname$": {
       "commandName": "Executable",
-      "executablePath": "C:\\Program Files\\Autodesk\\AutoCAD 2026\\acad.exe",
+      "executablePath": "C:\\Program Files\\Autodesk\\AutoCAD 2024\\acad.exe",
       "commandLineArgs": "/nologo /b \"$(MSBuildProjectDirectory)\\start.scr\""
     }
   }
 }
+```
+
+#### start.scr
+The framework sub-folder (e.g., net48 for AutoCAD 2024) have to be consitent with the specified acad.exe file in the Properties\LaunchSettigs.json file.
+```
+netload "$solutiondirectory$\$projectname$\bin\Debug\net48\$projectname$.dll" 
 ```
 
 #### AutocadTripleTargetPlugin.csproj
@@ -169,12 +175,6 @@ Default name of the assembly.
 ``` xml
 		<!-- Change the default project name as desired -->
 		<DefaultName>AcadTripleTargetPlugin</DefaultName>
-```
-
-#### start.scr
-The framework sub-folder (e.g., net8.0-windows) have to be consitent with the specified acad.exe file in the Properties\LaunchSettigs.json file.
-```
-netload "$solutiondirectory$\$projectname$\bin\Debug\net8.0-windows\$projectname$.dll" 
 ```
 
 ### Installation of the template
