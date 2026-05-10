@@ -2,7 +2,7 @@
   "profiles": {
     "$projectname$": {
       "commandName": "Executable",
-      "executablePath": "F:\\Program Files\\Autodesk\\AutoCAD 2026\\acad.exe",
+      "executablePath": "C:\\Program Files\\Autodesk\\AutoCAD 2026\\acad.exe",
       "commandLineArgs": "/nologo /b \"$(MSBuildProjectDirectory)\\start.scr\""
     }
   }
