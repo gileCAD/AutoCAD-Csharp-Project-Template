@@ -124,7 +124,7 @@ Default name of the assembly.
 ### AutoCAD triple target Csharp  Plugin Template
 
 #### Properties\launchSettings.json
-The path to the executablePath (acad.exe) file of the AutoCAD version to be launched at debugging startup must be consistent with that of the local computer and the targeted AutoCAD version used for debugging.
+The path to the executablePath (acad.exe) file of the AutoCAD version to be launched at debugging startup must be consistent with that of the local computer and the targeted AutoCAD version used for debugging (e.g., AutoCAD 2024).
 ```	json
 {
   "profiles": {
@@ -146,7 +146,7 @@ netload "$solutiondirectory$\$projectname$\bin\Debug\net48\$projectname$.dll"
 #### AutocadTripleTargetPlugin.csproj
 The MSBuild project file (.csproj) is an xml file that describe and control the process of generation of the applications.
 
-The paths to the folder containg AutoCAD libraries referenced by the project must be consistent with those of the local computer.
+The paths to the folders containing AutoCAD libraries referenced by the project must be consistent with those of the local computer.
 ```xml
 	<!-- AutoCAD 2015-2024 / .NET Framework 4.8 -->
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net48' ">
