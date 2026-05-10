@@ -1,1 +1,1 @@
-﻿netload "$solutiondirectory$\$projectname$\bin\Debug\net8.0-windows\$projectname$.dll" 
+﻿netload "$solutiondirectory$\$projectname$\bin\Debug\net48\$projectname$.dll" 
