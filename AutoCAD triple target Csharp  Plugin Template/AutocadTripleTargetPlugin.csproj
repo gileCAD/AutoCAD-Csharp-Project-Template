@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net48;net8.0-windows;net10.0-windows</TargetFrameworks>
+		<PlatformTarget>x64</PlatformTarget>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+	    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+	</PropertyGroup>
+  
+	<!-- AutoCAD 2015-2024 / .NET Framework 4.8 -->
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'net48' ">
+		<AcadReferencesPath>C:\ObjectARX 2015\inc</AcadReferencesPath>
+	</PropertyGroup>
+	<!-- AutoCAD 2025-2026 / .NET 8.0 -->
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'net8.0-windows' ">
+		<AcadReferencesPath>C:\ObjectARX 2025\inc</AcadReferencesPath>
+	</PropertyGroup>
+	<!-- AutoCAD 2027+ / .NET 10.0 -->
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'net10.0-windows' ">
+		<AcadReferencesPath>C:\ObjectARX 2027\inc</AcadReferencesPath>
+	</PropertyGroup>
+	
+	<ItemGroup Condition=" '$(TargetFramework)' != 'net48' ">
+		<FrameworkReference Include="Microsoft.WindowsDesktop.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="accoremgd">
+			<HintPath>$(AcadReferencesPath)\accoremgd.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Acdbmgd">
+			<HintPath>$(AcadReferencesPath)\acdbmgd.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="acmgd">
+			<HintPath>$(AcadReferencesPath)\acmgd.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="Properties\Resources.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Resources.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="Properties\Resources.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="start.scr">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+</Project>

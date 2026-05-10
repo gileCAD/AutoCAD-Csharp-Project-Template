@@ -8,6 +8,8 @@ These templates allow to start a C# project for an AutoCAD plugin in Visual Stud
 
 For AutoCAD 2027 and later (.NET 10.0), the template could be based on the 'AutoCAD R25 Csharp Project Template' after replacing the TargetFramework with: `net10.0-windows`. 
 
+'AutoCAD triple target Csharp  Plugin Template' is an example of multi framework targeting project (targets .NET Framework, .NET 8.0 and .NET 10.0). It generates three assemblies (net48, net8.0-windows and net10.0-windows sub-folders) from the same shared code source.
+
 ### Editing the template files
 In order for the template to work, the paths to the acad.exe file and to the AutoCAD libraries must match those on the local computer.
 
@@ -119,5 +121,61 @@ Default name of the assembly.
 		<!-- Change the default project name as desired -->
 		<DefaultName>AutocadR25Plugin</DefaultName>
 ```
+### AutoCAD triple target Csharp  Plugin Template
+
+#### Properties\launchSettings.json
+The path to the executablePath (acad.exe) file of the AutoCAD version to be launched at debugging startup must be consistent with that of the local computer and the targeted AutoCAD version used for debugging.
+```	json
+{
+  "profiles": {
+    "$safeprojectname$": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files\\Autodesk\\AutoCAD 2026\\acad.exe",
+      "commandLineArgs": "/nologo /b \"$(MSBuildProjectDirectory)\\start.scr\""
+    }
+  }
+}
+```
+
+#### AutocadTripleTargetPlugin.csproj
+The MSBuild project file (.csproj) is an xml file that describe and control the process of generation of the applications.
+
+The paths to the folder containg AutoCAD libraries referenced by the project must be consistent with those of the local computer.
+```xml
+	<!-- AutoCAD 2015-2024 / .NET Framework 4.8 -->
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'net48' ">
+		<AcadReferencesPath>C:\ObjectARX 2015\inc</AcadReferencesPath>
+	</PropertyGroup>
+	<!-- AutoCAD 2025-2026 / .NET 8.0 -->
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'net8.0-windows' ">
+		<AcadReferencesPath>C:\ObjectARX 2025\inc</AcadReferencesPath>
+	</PropertyGroup>
+	<!-- AutoCAD 2027+ / .NET 10.0 -->
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'net10.0-windows' ">
+		<AcadReferencesPath>C:\ObjectARX 2027\inc</AcadReferencesPath>
+	</PropertyGroup>
+```
+
+#### MyTemplate.vstemplate
+This file describes the template.
+
+Name and Desription of the template.
+``` xml
+		<!-- Change the name and description as desired -->
+		<Name>AutoCAD triple target Plugin</Name>
+		<Description>AutoCAD triple target Plugin C# project (.NET Framework 4.8 and .NET 8 / 10.0)</Description>
+```
+Default name of the assembly.
+``` xml
+		<!-- Change the default project name as desired -->
+		<DefaultName>AcadTripleTargetPlugin</DefaultName>
+```
+
+#### start.scr
+The framework sub-folder (e.g., net8.0-windows) have to be consitent with the specified acad.exe file in the Properties\LaunchSettigs.json file.
+```
+netload "$solutiondirectory$\$projectname$\bin\Debug\net8.0-windows\$projectname$.dll" 
+```
+
 ### Installation of the template
-The 'AutoCAD R24 Csharp Plugin Template' / 'AutoCAD R25 Csharp Plugin Template' folder (possibly zipped) have to be pasted in the 'Visual Studio 20XX\Templates\ProjectTemplates' directory.
+The 'AutoCAD R24 Csharp Plugin Template' / 'AutoCAD R25 Csharp Plugin Template' / 'AutoCAD triple target Csharp  Plugin Template' folder (possibly zipped) have to be pasted in the 'Visual Studio 20XX\Templates\ProjectTemplates' directory.
