@@ -6,24 +6,21 @@
 		<ImplicitUsings>disable</ImplicitUsings>
 		<Nullable>disable</Nullable>
 	    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
-		<!-- <UseWindowsForms>true</UseWindowsForms> -->
-		<!-- <UseWPF>true</UseWPF> -->
 	</PropertyGroup>
   
 	<!-- AutoCAD 2015-2024 / .NET Framework 4.8 -->
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net48' ">
-		<AcadReferencesPath>F:\ObjectARX 2015\inc</AcadReferencesPath>
+		<AcadReferencesPath>C:\ObjectARX 2015\inc</AcadReferencesPath>
 	</PropertyGroup>
 	<!-- AutoCAD 2025-2026 / .NET 8.0 -->
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net8.0-windows' ">
-		<AcadReferencesPath>F:\ObjectARX 2025\inc</AcadReferencesPath>
+		<AcadReferencesPath>C:\ObjectARX 2025\inc</AcadReferencesPath>
 	</PropertyGroup>
 	<!-- AutoCAD 2027+ / .NET 10.0 -->
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net10.0-windows' ">
-		<AcadReferencesPath>F:\ObjectARX 2027\inc</AcadReferencesPath>
+		<AcadReferencesPath>C:\ObjectARX 2027\inc</AcadReferencesPath>
 	</PropertyGroup>
 	
-	<!-- Eviter l'erreur de conflit de version entre .NET 4.8 et NET 8.0 ou 10.0 -->
 	<ItemGroup Condition=" '$(TargetFramework)' != 'net48' ">
 		<FrameworkReference Include="Microsoft.WindowsDesktop.App" />
 	</ItemGroup>
